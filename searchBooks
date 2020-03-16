@@ -1,0 +1,28 @@
+//Write a JavaScript function to find ALL the books in a 'library' written by a specific author. You should return:
+//The list of the book titles as a string, with titles separated by a comma; OR
+//'NOT FOUND' if there is no match.
+function searchBooks(arrayLibrary, author) {
+
+  booksFound = "NOT FOUND";
+  for (var i = 0, len = arrayLibrary.length; i < len; i++) {
+    if (arrayLibrary[i].author === author) {
+      if (booksFound === "NOT FOUND")
+        booksFound = arrayLibrary[i].title
+      else
+        booksFound = booksFound + ", " + arrayLibrary[i].title;
+    }
+
+  }
+
+  return booksFound;
+}
+
+library = 
+    [ 
+      { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+      { author: 'Carolann Camilo', title: 'Eyewitness', libraryID: 32456},
+      { author: 'Carolann Camilo', title: 'Cocky Marine', libraryID: 32457}  
+    ];
+
+var result = searchBooks(library, "Bill Gates");
+console.log(result);
