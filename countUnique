@@ -1,0 +1,13 @@
+//Write a simple JavaScript function that counts the number of unique items in an array and returns that value. Example dataset: ['hi','hello','hi'], unique items: 2
+function countUnique() {
+  const unique = (value, index, self) => {
+    return self.indexOf(value) === index
+  }
+
+  var dataset = ["hi", "hello", "hi"];
+  const uniqueItems = dataset.filter(unique)
+  return " There are " + uniqueItems.length + " unique items, which are " + uniqueItems;
+}
+
+var result = countUnique();
+console.log(result);
