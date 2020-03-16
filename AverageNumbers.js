@@ -1,4 +1,4 @@
-// JavaScript source code
+// Write a basic function to calculate the average of two numbers.
 function AverageNumbers(Num1, Num2) {
     return (Num1 + Num2) / 2;
 }
